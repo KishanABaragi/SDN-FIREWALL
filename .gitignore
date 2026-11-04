@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Compiled C binaries
+src/app_server
+src/client
+src/logger_server
+
+# Runtime logs
+logs/
+*.log
+*.out
+
+# Temporary files
+*.tmp
+*.swp
+.DS_Store
+
+# Local environment files
+.env
+
+# Third-party/course reference documents (keep local; don't publish)
+docs/Official_Project_Guidelines_Rubric.pdf
+docs/Team_Reference_Presentation.pptx
+docs/Team_Reference_README.md
+docs/Team_Reference_Report.pdf

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101b2d">
+  <title>Dynamic Firewall · SDN Firewall Control Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="#overview" aria-label="Dynamic Firewall home"><span class="brand-symbol"><span></span><span></span><span></span></span><span><b>SDN FIREWALL</b><small>SDN FIREWALL</small></span></a>
+    <div class="workspace-tag"><i></i><span>LOCAL LAB</span><b>●</b></div>
+    <div class="nav-caption">WORKSPACE</div>
+    <nav id="navigation" class="navigation">
+      <button class="nav-link active" data-page="overview"><span class="nav-icon">◫</span>Overview</button>
+      <button class="nav-link" data-page="topology"><span class="nav-icon">⌘</span>Network map</button>
+      <button class="nav-link" data-page="firewall"><span class="nav-icon">⬡</span>Firewall controls</button>
+      <button class="nav-link" data-page="tests"><span class="nav-icon">▤</span>Test centre<span class="nav-count">7</span></button>
+      <button class="nav-link" data-page="events"><span class="nav-icon">≋</span>Event timeline</button>
+      <button class="nav-link" data-page="performance"><span class="nav-icon">⌁</span>Performance</button>
+    </nav>
+    <div class="sidebar-spacer"></div>
+    <div class="sidebar-help"><div class="help-glyph">?</div><div><b>Need a hand?</b><span>Read the quick guide</span></div><button data-page="guide" aria-label="Open guide">↗</button></div>
+    <div class="sidebar-foot"><span class="online-pulse"></span> LOCAL ENVIRONMENT <span class="version">v3.0</span></div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <div class="crumb"><span>SECURITY OPERATIONS</span><b>/</b><strong id="crumb-page">Overview</strong></div>
+      <div class="topbar-actions"><div class="system-indicator" id="header-health"><span class="health-dot"></span><span>Checking services…</span></div><button class="round-btn" id="refresh-btn" title="Refresh live data">↻</button><div class="user-chip">SF</div></div>
+    </header>
+    <div class="page-container">
+      <section class="page-heading"><div><div class="eyebrow" id="page-eyebrow">CONTROL ROOM / LIVE MONITORING</div><h1 id="page-title">Overview</h1><p id="page-description">A clear view of your network, firewall activity and system health.</p></div><div class="heading-meta"><span class="live-tag"><i></i> LIVE VIEW</span><span id="last-updated">Waiting for first check</span></div></section>
+      <div id="global-alert" class="global-alert hidden"></div>
+      <div id="page-content" aria-live="polite"></div>
+      <footer class="page-footer"><span>SDN FIREWALL <b>·</b> SDN FIREWALL CONTROL ROOM</span><span>Runs locally on this machine <i></i></span></footer>
+    </div>
+  </main>
+</div>
+<div id="toast-area" class="toast-area"></div>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

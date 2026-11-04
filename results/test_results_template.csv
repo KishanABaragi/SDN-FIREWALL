@@ -1,0 +1,5 @@
+run_id,phase,source_host,destination_host,test_type,packets_sent,packets_received,packet_loss_percent,avg_rtt_ms,client_connect_ms,client_message_rtt_avg_ms,controller_rule_submission_ms,end_to_end_block_detection_ms,notes
+1,baseline,h1,h3,ping,,,,,,,,,Fill using fresh run output
+1,during_block,h1,h2,ping,,,,,,,,,Expected blocked host traffic fails
+1,during_block,h1,h3,ping,,,,,,,,,Expected unaffected traffic continues
+1,after_recovery,h1,h2,ping,,,,,,,,,Expected connectivity restored after timer expiry

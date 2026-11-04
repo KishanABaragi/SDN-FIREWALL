@@ -1,0 +1,3 @@
+Sentinel SDN Firewall Control Room
+Version: 3.0
+Build type: complete project replacement

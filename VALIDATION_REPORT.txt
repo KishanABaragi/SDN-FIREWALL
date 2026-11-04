@@ -1,0 +1,31 @@
+SENTINEL — SDN FIREWALL CONTROL ROOM
+VALIDATION REPORT
+=================
+
+Packaging checks performed in the build environment:
+[PASS] Python syntax compilation: service_supervisor.py
+[PASS] Python syntax compilation: src/mininet_daemon.py
+[PASS] Python syntax compilation: src/security_controller.py
+[PASS] Python syntax compilation: gui/backend/main.py
+[PASS] C build: app_server, client and logger_server compile with the included build.sh
+[PASS] JavaScript syntax check: node --check gui/frontend/assets/app.js
+[PASS] FastAPI import and route registration
+[PASS] HTTP smoke checks using FastAPI TestClient: /, /api/health, /api/status,
+       /api/hosts, /api/tests and /api/events returned HTTP 200
+[PASS] API metadata returns seven tests and six hosts
+[PASS] Startup cleanup is in RUN_APP.sh before Ryu starts; no mn -c remains
+       in src/mininet_daemon.py startup path
+[PASS] Mininet manager status requests remain responsive while a test runs
+[PASS] Run-all route is registered before the integer test-id route
+
+NOT VERIFIED IN THIS PACKAGING ENVIRONMENT:
+[NOT RUN] End-to-end Mininet / Open vSwitch / Ryu startup inside the user's Ubuntu VM
+[NOT RUN] Live packet forwarding, live block enforcement, and automatic SYN detection
+[NOT RUN] Actual automatic timer expiry / UNBLOCK in the user's VM
+[NOT RUN] Live application/logger traffic and performance measurements
+
+The build environment used for packaging does not provide the user's running
+Mininet network or Ryu controller. The ZIP therefore does not claim that live
+network tests have passed. Run ./RUN_APP.sh in the target Ubuntu VM, then run
+the dashboard tests and review their evidence. A test result is only a PASS
+when the live runner observes the required evidence.
